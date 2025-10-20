@@ -8,6 +8,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import Image from "next/image";
 
 export default function LoginPage() {
   const [email, setEmail] = useState("");
@@ -27,7 +28,7 @@ export default function LoginPage() {
     <div className="min-h-screen bg-black flex items-center justify-center p-4">
       <Link
         href="/"
-        className="absolute top-6 left-6 z-20 text-zinc-400 hover:text-[#e78a53] transition-colors duration-200 flex items-center space-x-2"
+        className="absolute top-6 left-6 z-20 text-zinc-400 hover:text-primary transition-colors duration-200 flex items-center space-x-2"
       >
         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path
@@ -44,8 +45,8 @@ export default function LoginPage() {
       <div className="absolute inset-0 bg-gradient-to-br from-zinc-900 via-black to-zinc-900" />
 
       {/* Decorative elements */}
-      <div className="absolute top-20 left-20 w-72 h-72 bg-[#e78a53]/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-20 right-20 w-96 h-96 bg-[#e78a53]/5 rounded-full blur-3xl" />
+      <div className="absolute top-20 left-20 w-72 h-72 bg-primary/10 rounded-full blur-3xl" />
+      <div className="absolute bottom-20 right-20 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
 
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -57,16 +58,7 @@ export default function LoginPage() {
         <div className="text-center mb-8">
           <Link href="/" className="inline-block mb-6">
             <div className="flex items-center justify-center space-x-2">
-              <svg
-                fill="currentColor"
-                viewBox="0 0 147 70"
-                xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true"
-                className="text-[#e78a53] rounded-full size-8 w-8"
-              >
-                <path d="M56 50.2031V14H70V60.1562C70 65.5928 65.5928 70 60.1562 70C57.5605 70 54.9982 68.9992 53.1562 67.1573L0 14H19.7969L56 50.2031Z"></path>
-                <path d="M147 56H133V23.9531L100.953 56H133V70H96.6875C85.8144 70 77 61.1856 77 50.3125V14H91V46.1562L123.156 14H91V0H127.312C138.186 0 147 8.81439 147 19.6875V56Z"></path>
-              </svg>
+              <Image src="/images/doara-logo.png" height="40" width="40" alt="logo" />
             </div>
           </Link>
           <h1 className="text-3xl font-bold text-white mb-2">Welcome back</h1>
@@ -91,7 +83,7 @@ export default function LoginPage() {
                 placeholder="Enter your email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="bg-zinc-800/50 border-zinc-700 text-white placeholder:text-zinc-500 focus:border-[#e78a53] focus:ring-[#e78a53]/20"
+                className="bg-zinc-800/50 border-zinc-700 text-white placeholder:text-zinc-500 focus:border-primary focus:ring-primary/20"
                 required
               />
             </div>
@@ -106,7 +98,7 @@ export default function LoginPage() {
                 placeholder="Enter your password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="bg-zinc-800/50 border-zinc-700 text-white placeholder:text-zinc-500 focus:border-[#e78a53] focus:ring-[#e78a53]/20"
+                className="bg-zinc-800/50 border-zinc-700 text-white placeholder:text-zinc-500 focus:border-primary focus:ring-primary/20"
                 required
               />
             </div>
@@ -115,11 +107,11 @@ export default function LoginPage() {
               <label className="flex items-center space-x-2 text-sm">
                 <input
                   type="checkbox"
-                  className="rounded border-zinc-700 bg-zinc-800 text-[#e78a53] focus:ring-[#e78a53]/20"
+                  className="rounded border-zinc-700 bg-zinc-800 text-primary focus:ring-primary/20"
                 />
                 <span className="text-zinc-300">Remember me</span>
               </label>
-              <Link href="#" className="text-sm text-[#e78a53] hover:text-[#e78a53]/80">
+              <Link href="#" className="text-sm text-primary hover:text-primary/80">
                 Forgot password?
               </Link>
             </div>
@@ -127,7 +119,7 @@ export default function LoginPage() {
             <Button
               type="submit"
               disabled={isLoading}
-              className="w-full bg-[#e78a53] hover:bg-[#e78a53]/90 text-white font-medium py-3 rounded-xl transition-colors"
+              className="w-full bg-primary hover:bg-primary/90 text-white font-medium py-3 rounded-xl transition-colors"
             >
               {isLoading ? "Signing in..." : "Sign in"}
             </Button>
@@ -136,7 +128,7 @@ export default function LoginPage() {
           <div className="mt-6 text-center">
             <p className="text-zinc-400">
               Don&apos;t have an account?{" "}
-              <Link href="/signup" className="text-[#e78a53] hover:text-[#e78a53]/80 font-medium">
+              <Link href="/signup" className="text-primary hover:text-primary/80 font-medium">
                 Sign up
               </Link>
             </p>
