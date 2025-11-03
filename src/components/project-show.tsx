@@ -90,7 +90,7 @@ const Preview = () => {
               href={exampleImages[0].link}
               target="_blank"
               rel="noopener noreferrer"
-              className="group block relative overflow-hidden rounded-sm"
+              className="group block relative overflow-hidden rounded-sm border border-primary/40 shadow-[0_0_10px_rgba(41,169,214,0.3)]"
             >
               <motion.img
                 initial={{ opacity: 0 }}
@@ -113,7 +113,7 @@ const Preview = () => {
               href={exampleImages[1].link}
               target="_blank"
               rel="noopener noreferrer"
-              className="group block relative overflow-hidden rounded-sm"
+              className="group block relative overflow-hidden rounded-sm border border-primary/40 shadow-[0_0_10px_rgba(41,169,214,0.3)]"
             >
               <motion.img
                 initial={{ opacity: 0 }}
@@ -136,7 +136,7 @@ const Preview = () => {
               href={exampleImages[2].link}
               target="_blank"
               rel="noopener noreferrer"
-              className="group block relative overflow-hidden rounded-sm"
+              className="group block relative overflow-hidden rounded-sm border border-primary/40 shadow-[0_0_10px_rgba(41,169,214,0.3)]"
             >
               <motion.img
                 initial={{ opacity: 0 }}
@@ -159,7 +159,7 @@ const Preview = () => {
               href={exampleImages[3].link}
               target="_blank"
               rel="noopener noreferrer"
-              className="group block relative overflow-hidden rounded-sm"
+              className="group block relative overflow-hidden rounded-sm border border-primary/40 shadow-[0_0_10px_rgba(41,169,214,0.3)]"
             >
               <motion.img
                 initial={{ opacity: 0 }}
@@ -183,7 +183,7 @@ const Preview = () => {
               href={exampleImages[4].link}
               target="_blank"
               rel="noopener noreferrer"
-              className="group block relative overflow-hidden rounded-sm"
+              className="group block relative overflow-hidden rounded-sm border border-primary/40 shadow-[0_0_10px_rgba(41,169,214,0.3)]"
             >
               <motion.img
                 initial={{ opacity: 0 }}
@@ -206,7 +206,7 @@ const Preview = () => {
               href={exampleImages[7].link}
               target="_blank"
               rel="noopener noreferrer"
-              className="group block relative overflow-hidden rounded-sm"
+              className="group block relative overflow-hidden rounded-sm border border-primary/40 shadow-[0_0_10px_rgba(41,169,214,0.3)]"
             >
               <motion.img
                 initial={{ opacity: 0 }}
@@ -230,7 +230,7 @@ const Preview = () => {
               href={exampleImages[5].link}
               target="_blank"
               rel="noopener noreferrer"
-              className="group block relative overflow-hidden rounded-sm"
+              className="group block relative overflow-hidden rounded-sm border border-primary/40 shadow-[0_0_10px_rgba(41,169,214,0.3)]"
             >
               <motion.img
                 initial={{ opacity: 0 }}
@@ -253,7 +253,7 @@ const Preview = () => {
               href={exampleImages[6].link}
               target="_blank"
               rel="noopener noreferrer"
-              className="group block relative overflow-hidden rounded-sm"
+              className="group block relative overflow-hidden rounded-sm border border-primary/40 shadow-[0_0_10px_rgba(41,169,214,0.3)]"
             >
               <motion.img
                 initial={{ opacity: 0 }}
