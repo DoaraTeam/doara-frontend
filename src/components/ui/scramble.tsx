@@ -2,7 +2,7 @@
 
 import type React from "react";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { motion } from "framer-motion";
 
 import { cn } from "@/lib/utils";
@@ -37,11 +37,12 @@ const ScrambleHover: React.FC<ScrambleHoverProps> = ({
 }) => {
   const [displayText, setDisplayText] = useState(text);
   const [isScrambling, setIsScrambling] = useState(false);
-  const [revealedIndices, setRevealedIndices] = useState(new Set<number>());
+  const revealedIndicesRef = useRef(new Set<number>());
 
   useEffect(() => {
     let interval: NodeJS.Timeout;
     let currentIteration = 0;
+    const revealedIndices = revealedIndicesRef.current;
 
     const getNextIndex = () => {
       const textLength = text.length;
@@ -141,6 +142,7 @@ const ScrambleHover: React.FC<ScrambleHoverProps> = ({
     return () => {
       if (interval) clearInterval(interval);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [
     isHovering,
     text,
@@ -161,18 +163,21 @@ const ScrambleHover: React.FC<ScrambleHoverProps> = ({
     >
       <span className="sr-only">{displayText}</span>
       <span aria-hidden="true">
-        {displayText.split("").map((char, index) => (
-          <span
-            key={index}
-            className={cn(
-              revealedIndices.has(index) || !isScrambling || !isHovering
-                ? className
-                : scrambledClassName
-            )}
-          >
-            {char}
-          </span>
-        ))}
+        {displayText.split("").map((char, index) => {
+          const revealedIndices = revealedIndicesRef.current;
+          return (
+            <span
+              key={index}
+              className={cn(
+                revealedIndices.has(index) || !isScrambling || !isHovering
+                  ? className
+                  : scrambledClassName
+              )}
+            >
+              {char}
+            </span>
+          );
+        })}
       </span>
     </motion.span>
   );

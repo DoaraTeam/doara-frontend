@@ -69,6 +69,7 @@ const Earth: React.FC<EarthProps> = ({
     return () => {
       globe.destroy();
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [dark]);
 
   return (
