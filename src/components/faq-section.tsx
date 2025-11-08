@@ -78,7 +78,10 @@ export function FAQSection() {
           {faqs.map((faq, index) => (
             <motion.div
               key={index}
-              className="from-secondary/40 to-secondary/10 rounded-2xl border border-white/10 bg-gradient-to-b p-6 shadow-[0px_2px_0px_0px_rgba(255,255,255,0.1)_inset] transition-all duration-300 hover:border-white/20 cursor-pointer"
+              className="from-secondary/40 to-secondary/10 rounded-2xl border border-border/50 bg-gradient-to-b p-6 transition-all duration-300 hover:border-border cursor-pointer"
+              style={{
+                boxShadow: "0px 2px 0px 0px rgba(255,255,255,0.1) inset",
+              }}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -97,7 +100,7 @@ export function FAQSection() {
               {...(index === faqs.length - 1 && { "data-faq": faq.question })}
             >
               <div className="flex items-start justify-between">
-                <h3 className="m-0 font-medium pr-4">{faq.question}</h3>
+                <h3 className="m-0 font-medium pr-4 text-foreground">{faq.question}</h3>
                 <motion.div
                   animate={{ rotate: openItems.includes(index) ? 180 : 0 }}
                   transition={{ duration: 0.3, ease: "easeInOut" }}

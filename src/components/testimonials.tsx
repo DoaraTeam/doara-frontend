@@ -87,8 +87,8 @@ const TestimonialCard = ({
           className="h-10 w-10 rounded-full"
         />
         <div className="flex flex-col">
-          <div className="leading-5 font-medium tracking-tight text-white">{name}</div>
-          <div className="leading-5 tracking-tight text-white/60">{username}</div>
+          <div className="leading-5 font-medium tracking-tight text-foreground">{name}</div>
+          <div className="leading-5 tracking-tight text-muted-foreground">{username}</div>
         </div>
       </div>
     </div>
@@ -103,11 +103,11 @@ export function TestimonialsSection() {
           <div className="flex justify-center">
             <button
               type="button"
-              className="group relative z-[60] mx-auto rounded-full border border-white/20 bg-white/5 px-6 py-1 text-xs backdrop-blur transition-all duration-300 hover:scale-105 hover:shadow-xl active:scale-100 md:text-sm"
+              className="group relative z-[60] mx-auto rounded-full border border-border/50 bg-muted/20 px-6 py-1 text-xs backdrop-blur transition-all duration-300 hover:scale-105 hover:shadow-xl active:scale-100 md:text-sm"
             >
               <div className="absolute inset-x-0 -top-px mx-auto h-0.5 w-1/2 bg-gradient-to-r from-transparent via-primary to-transparent shadow-2xl transition-all duration-500 group-hover:w-3/4"></div>
               <div className="absolute inset-x-0 -bottom-px mx-auto h-0.5 w-1/2 bg-gradient-to-r from-transparent via-primary to-transparent shadow-2xl transition-all duration-500 group-hover:h-px"></div>
-              <span className="relative text-white">Testimonials</span>
+              <span className="relative text-foreground">Testimonials</span>
             </button>
           </div>
           <h2 className="from-foreground/60 via-foreground to-foreground/60 dark:from-muted-foreground/55 dark:via-foreground dark:to-muted-foreground/55 mt-5 bg-gradient-to-r bg-clip-text text-center text-4xl font-semibold tracking-tighter text-transparent md:text-[54px] md:leading-[60px] __className_bb4e88 relative z-10">
@@ -147,7 +147,7 @@ export function TestimonialsSection() {
         </div>
 
         <div className="-mt-8 flex justify-center">
-          <button className="group relative inline-flex items-center gap-2 rounded-full border border-primary/30 bg-black/50 px-6 py-3 text-sm font-medium text-white transition-all hover:border-primary/60 hover:bg-primary/10 active:scale-95">
+          <button className="group relative inline-flex items-center gap-2 rounded-full border border-primary/30 bg-background/50 backdrop-blur-sm px-6 py-3 text-sm font-medium text-foreground transition-all hover:border-primary/60 hover:bg-primary/10 active:scale-95">
             <div className="absolute inset-x-0 -top-px mx-auto h-px w-3/4 bg-gradient-to-r from-transparent via-primary/40 to-transparent"></div>
             <div className="absolute inset-x-0 -bottom-px mx-auto h-px w-3/4 bg-gradient-to-r from-transparent via-secondary/40 to-transparent"></div>
             <svg className="h-4 w-4 text-primary" fill="currentColor" viewBox="0 0 24 24">

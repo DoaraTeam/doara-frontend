@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
+import { ThemeToggle } from "./theme-toggle";
 
 interface HeaderProps {
   isScrolled: boolean;
@@ -105,7 +106,9 @@ export function Header({ isScrolled }: HeaderProps) {
           </a>
         </div>
 
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-3">
+          <ThemeToggle />
+
           <a
             href="/login"
             className="font-medium transition-colors hover:text-foreground text-muted-foreground text-sm cursor-pointer"
@@ -133,23 +136,27 @@ export function Header({ isScrolled }: HeaderProps) {
           <Image src="/images/doara-logo.png" height="20" width="20" alt="logo" />
         </a>
 
-        <button
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className="flex items-center justify-center w-10 h-10 rounded-full bg-background/50 border border-border/50 transition-colors hover:bg-background/80"
-          aria-label="Toggle menu"
-        >
-          <div className="flex flex-col items-center justify-center w-5 h-5 space-y-1">
-            <span
-              className={`block w-4 h-0.5 bg-foreground transition-all duration-300 ${isMobileMenuOpen ? "rotate-45 translate-y-1.5" : ""}`}
-            ></span>
-            <span
-              className={`block w-4 h-0.5 bg-foreground transition-all duration-300 ${isMobileMenuOpen ? "opacity-0" : ""}`}
-            ></span>
-            <span
-              className={`block w-4 h-0.5 bg-foreground transition-all duration-300 ${isMobileMenuOpen ? "-rotate-45 -translate-y-1.5" : ""}`}
-            ></span>
-          </div>
-        </button>
+        <div className="flex items-center gap-2">
+          <ThemeToggle />
+
+          <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="flex items-center justify-center w-10 h-10 rounded-full bg-background/50 border border-border/50 transition-colors hover:bg-background/80"
+            aria-label="Toggle menu"
+          >
+            <div className="flex flex-col items-center justify-center w-5 h-5 space-y-1">
+              <span
+                className={`block w-4 h-0.5 bg-foreground transition-all duration-300 ${isMobileMenuOpen ? "rotate-45 translate-y-1.5" : ""}`}
+              ></span>
+              <span
+                className={`block w-4 h-0.5 bg-foreground transition-all duration-300 ${isMobileMenuOpen ? "opacity-0" : ""}`}
+              ></span>
+              <span
+                className={`block w-4 h-0.5 bg-foreground transition-all duration-300 ${isMobileMenuOpen ? "-rotate-45 -translate-y-1.5" : ""}`}
+              ></span>
+            </div>
+          </button>
+        </div>
       </header>
 
       {/* Mobile Menu Overlay */}

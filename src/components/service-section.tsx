@@ -42,18 +42,18 @@ const SLIDES = [
 
 export function ServicesSection() {
   return (
-    <HoverSlider className="min-h-svh p-6 md:px-12 bg-[#0a0a0a] text-white">
+    <HoverSlider className="min-h-svh p-6 md:px-12 bg-background text-foreground">
       <div className="max-w-7xl mx-auto py-20">
         {/* Header */}
         <div className="text-center mb-16 relative z-10">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-muted/20 border border-border/50 backdrop-blur-sm mb-6">
             <Sparkles className="w-4 h-4 text-primary" />
-            <span className="text-sm font-medium text-white/80">Services</span>
+            <span className="text-sm font-medium text-foreground/80">Services</span>
           </div>
 
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Our Services</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">Our Services</h2>
 
-          <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
             Explore the wide range of services we offer to help you achieve your goals.
           </p>
         </div>

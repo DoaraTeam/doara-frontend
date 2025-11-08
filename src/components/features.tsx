@@ -359,10 +359,10 @@ export default function Features() {
                 </div>
                 <div className="flex grow items-center justify-center select-none relative min-h-[300px] p-4">
                   <div className="w-full max-w-lg">
-                    <div className="relative rounded-2xl border border-white/10 bg-black/20 dark:bg-white/5 backdrop-blur-sm">
+                    <div className="relative rounded-2xl border border-border/50 bg-muted/20 backdrop-blur-sm">
                       <div className="p-4">
                         <textarea
-                          className="w-full min-h-[100px] bg-transparent border-none text-white placeholder:text-white/50 resize-none focus:outline-none text-base leading-relaxed"
+                          className="w-full min-h-[100px] bg-transparent border-none text-foreground placeholder:text-muted-foreground resize-none focus:outline-none text-base leading-relaxed"
                           placeholder="Search the web..."
                           value={inputValue}
                           onChange={(e) => setInputValue(e.target.value)}

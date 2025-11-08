@@ -59,7 +59,7 @@ export function HoverFooter() {
   ];
 
   return (
-    <footer className="bg-[#0F0F11]/10 relative h-fit rounded-3xl overflow-hidden m-8">
+    <footer className="bg-muted/10 relative h-fit rounded-3xl overflow-hidden m-8">
       <div className="max-w-7xl mx-auto p-14 z-40 relative">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-8 lg:gap-16 pb-12">
           {/* Brand section */}
@@ -68,7 +68,7 @@ export function HoverFooter() {
               <Image src="/images/doara-logo.png" height="40" width="40" alt="logo" />
               <span className="text-[#29A9D6] text-3xl font-bold">oara</span>
             </div>
-            <p className="text-sm leading-relaxed">
+            <p className="text-sm leading-relaxed text-muted-foreground">
               Nur UI is a modern React and Next.js based UI component library.
             </p>
           </div>
@@ -76,11 +76,14 @@ export function HoverFooter() {
           {/* Footer link sections */}
           {footerLinks.map((section) => (
             <div key={section.title}>
-              <h4 className="text-white text-lg font-semibold mb-6">{section.title}</h4>
+              <h4 className="text-foreground text-lg font-semibold mb-6">{section.title}</h4>
               <ul className="space-y-3">
                 {section.links.map((link) => (
                   <li key={link.label} className="relative">
-                    <a href={link.href} className="hover:text-primary transition-colors">
+                    <a
+                      href={link.href}
+                      className="text-muted-foreground hover:text-primary transition-colors"
+                    >
                       {link.label}
                     </a>
                     {link.pulse && (
@@ -94,17 +97,22 @@ export function HoverFooter() {
 
           {/* Contact section */}
           <div>
-            <h4 className="text-white text-lg font-semibold mb-6">Contact Us</h4>
+            <h4 className="text-foreground text-lg font-semibold mb-6">Contact Us</h4>
             <ul className="space-y-4">
               {contactInfo.map((item, i) => (
                 <li key={i} className="flex items-center space-x-3">
                   {item.icon}
                   {item.href ? (
-                    <a href={item.href} className="hover:text-primary transition-colors">
+                    <a
+                      href={item.href}
+                      className="text-muted-foreground hover:text-primary transition-colors"
+                    >
                       {item.text}
                     </a>
                   ) : (
-                    <span className="hover:text-primary transition-colors">{item.text}</span>
+                    <span className="text-muted-foreground hover:text-primary transition-colors">
+                      {item.text}
+                    </span>
                   )}
                 </li>
               ))}
@@ -117,7 +125,7 @@ export function HoverFooter() {
         {/* Footer bottom */}
         <div className="flex flex-col md:flex-row justify-between items-center text-sm space-y-4 md:space-y-0">
           {/* Social icons */}
-          <div className="flex space-x-6 text-gray-400">
+          <div className="flex space-x-6 text-muted-foreground">
             {socialLinks.map(({ icon, label, href }) => (
               <a
                 key={label}
@@ -131,7 +139,7 @@ export function HoverFooter() {
           </div>
 
           {/* Copyright */}
-          <p className="text-center md:text-left">
+          <p className="text-center md:text-left text-muted-foreground">
             &copy; {new Date().getFullYear()} Doaraui. All rights reserved.
           </p>
         </div>

@@ -65,7 +65,7 @@ const Preview = () => {
   }, [animate]);
 
   return (
-    <section className="relative w-full min-h-[600px] overflow-hidden bg-black py-10">
+    <section className="relative w-full min-h-[600px] overflow-hidden bg-background py-10">
       {/* Badge ở trên cùng giữa */}
       <div className="relative z-50 flex justify-center pt-2 pb-4">
         <motion.div
@@ -73,10 +73,10 @@ const Preview = () => {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm"
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-muted/20 border border-border/50 backdrop-blur-sm"
         >
           <Sparkles className="w-4 h-4 text-primary" />
-          <span className="text-sm font-medium text-white/80">Product</span>
+          <span className="text-sm font-medium text-foreground/80">Product</span>
         </motion.div>
       </div>
 
@@ -279,7 +279,7 @@ const Preview = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.88, delay: 1.5 }}
         >
-          <p className="text-5xl md:text-7xl text-white font-calendas italic">Product.</p>
+          <p className="text-5xl md:text-7xl text-foreground font-calendas italic">Product.</p>
         </motion.div>
       </div>
     </section>

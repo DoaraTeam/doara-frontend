@@ -15,12 +15,6 @@ export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    const root = window.document.documentElement;
-    root.classList.remove("light", "system");
-    root.classList.add("dark");
-  }, []);
-
-  useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 100);
     };
@@ -30,13 +24,13 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen w-full relative bg-black">
+    <div className="min-h-screen w-full relative bg-background">
       {/* Pearl Mist Background with Top Glow */}
       <div
-        className="absolute inset-0 z-0"
+        className="absolute inset-0 z-0 opacity-70 dark:opacity-100"
         style={{
           background:
-            "radial-gradient(ellipse 50% 35% at 50% 0%, rgba(41, 169, 214, 0.22), transparent 60%), #000000",
+            "radial-gradient(ellipse 50% 35% at 50% 0%, rgba(41, 169, 214, 0.22), transparent 60%), var(--background)",
         }}
       />
 
