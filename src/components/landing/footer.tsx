@@ -4,29 +4,28 @@ import { Mail, Phone, MapPin, Facebook, Instagram, Twitter, Dribbble, Globe } fr
 import { FooterBackgroundGradient } from "@/components/ui/hover-footer";
 import { TextHoverEffect } from "@/components/ui/hover-footer";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 export function HoverFooter() {
+  const t = useTranslations("HoverFooter");
+
   // Footer link data
   const footerLinks = [
     {
-      title: "About Us",
+      key: "aboutUs",
       links: [
-        { label: "Company History", href: "#" },
-        { label: "Meet the Team", href: "#" },
-        { label: "Employee Handbook", href: "#" },
-        { label: "Careers", href: "#" },
+        { key: "companyHistory", href: "#" },
+        { key: "meetTheTeam", href: "#" },
+        { key: "employeeHandbook", href: "#" },
+        { key: "careers", href: "#" },
       ],
     },
     {
-      title: "Helpful Links",
+      key: "helpfulLinks",
       links: [
-        { label: "FAQs", href: "#" },
-        { label: "Support", href: "#" },
-        {
-          label: "Live Chat",
-          href: "#",
-          pulse: true,
-        },
+        { key: "faqs", href: "#" },
+        { key: "support", href: "#" },
+        { key: "liveChat", href: "#", pulse: true },
       ],
     },
   ];
@@ -34,28 +33,28 @@ export function HoverFooter() {
   // Contact info data
   const contactInfo = [
     {
+      key: "email",
       icon: <Mail size={18} className="text-primary" />,
-      text: "doara-support@gmail.com",
       href: "mailto:doara-support@gmail.com",
     },
     {
+      key: "phone",
       icon: <Phone size={18} className="text-primary" />,
-      text: "+91 86373 73116",
       href: "tel:+918637373116",
     },
     {
+      key: "address",
       icon: <MapPin size={18} className="text-primary" />,
-      text: "Tam kỳ, Quảng Nam",
     },
   ];
 
   // Social media icons
   const socialLinks = [
-    { icon: <Facebook size={20} />, label: "Facebook", href: "#" },
-    { icon: <Instagram size={20} />, label: "Instagram", href: "#" },
-    { icon: <Twitter size={20} />, label: "Twitter", href: "#" },
-    { icon: <Dribbble size={20} />, label: "Dribbble", href: "#" },
-    { icon: <Globe size={20} />, label: "Globe", href: "#" },
+    { key: "facebook", icon: <Facebook size={20} />, href: "#" },
+    { key: "instagram", icon: <Instagram size={20} />, href: "#" },
+    { key: "twitter", icon: <Twitter size={20} />, href: "#" },
+    { key: "dribbble", icon: <Dribbble size={20} />, href: "#" },
+    { key: "globe", icon: <Globe size={20} />, href: "#" },
   ];
 
   return (
@@ -65,26 +64,26 @@ export function HoverFooter() {
           {/* Brand section */}
           <div className="flex flex-col space-y-4">
             <div className="flex items-center space-x-2">
-              <Image src="/images/doara-logo.png" height="40" width="40" alt="logo" />
-              <span className="text-[#29A9D6] text-3xl font-bold">oara</span>
+              <Image src="/images/doara-logo.png" height="40" width="40" alt={t("brandName")} />
+              <span className="text-[#29A9D6] text-3xl font-bold">{t("brandName")}</span>
             </div>
-            <p className="text-sm leading-relaxed text-muted-foreground">
-              Nur UI is a modern React and Next.js based UI component library.
-            </p>
+            <p className="text-sm leading-relaxed text-muted-foreground">{t("brandDescription")}</p>
           </div>
 
           {/* Footer link sections */}
           {footerLinks.map((section) => (
-            <div key={section.title}>
-              <h4 className="text-foreground text-lg font-semibold mb-6">{section.title}</h4>
+            <div key={section.key}>
+              <h4 className="text-foreground text-lg font-semibold mb-6">
+                {t(`links.${section.key}.title`)}
+              </h4>
               <ul className="space-y-3">
                 {section.links.map((link) => (
-                  <li key={link.label} className="relative">
+                  <li key={link.key} className="relative">
                     <a
                       href={link.href}
                       className="text-muted-foreground hover:text-primary transition-colors"
                     >
-                      {link.label}
+                      {t(`links.${section.key}.links.${link.key}`)}
                     </a>
                     {link.pulse && (
                       <span className="absolute top-0 right-[-10px] w-2 h-2 rounded-full bg-primary animate-pulse"></span>
@@ -97,21 +96,21 @@ export function HoverFooter() {
 
           {/* Contact section */}
           <div>
-            <h4 className="text-foreground text-lg font-semibold mb-6">Contact Us</h4>
+            <h4 className="text-foreground text-lg font-semibold mb-6">{t("contactTitle")}</h4>
             <ul className="space-y-4">
-              {contactInfo.map((item, i) => (
-                <li key={i} className="flex items-center space-x-3">
+              {contactInfo.map((item) => (
+                <li key={item.key} className="flex items-center space-x-3">
                   {item.icon}
                   {item.href ? (
                     <a
                       href={item.href}
                       className="text-muted-foreground hover:text-primary transition-colors"
                     >
-                      {item.text}
+                      {t(`contactInfo.${item.key}.text`)}
                     </a>
                   ) : (
                     <span className="text-muted-foreground hover:text-primary transition-colors">
-                      {item.text}
+                      {t(`contactInfo.${item.key}.text`)}
                     </span>
                   )}
                 </li>
@@ -126,11 +125,11 @@ export function HoverFooter() {
         <div className="flex flex-col md:flex-row justify-between items-center text-sm space-y-4 md:space-y-0">
           {/* Social icons */}
           <div className="flex space-x-6 text-muted-foreground">
-            {socialLinks.map(({ icon, label, href }) => (
+            {socialLinks.map(({ key, icon, href }) => (
               <a
-                key={label}
+                key={key}
                 href={href}
-                aria-label={label}
+                aria-label={t(`socialLinks.${key}`)}
                 className="hover:text-primary transition-colors"
               >
                 {icon}
@@ -140,14 +139,14 @@ export function HoverFooter() {
 
           {/* Copyright */}
           <p className="text-center md:text-left text-muted-foreground">
-            &copy; {new Date().getFullYear()} Doaraui. All rights reserved.
+            {t("copyright", { year: new Date().getFullYear() })}
           </p>
         </div>
       </div>
 
       {/* Text hover effect */}
       <div className="lg:flex hidden h-[30rem] -mt-52 -mb-36">
-        <TextHoverEffect text="DOARA" className="z-50" />
+        <TextHoverEffect text={t("textHover")} className="z-50" />
       </div>
 
       <FooterBackgroundGradient />

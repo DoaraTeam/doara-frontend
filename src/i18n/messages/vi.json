@@ -1,0 +1,262 @@
+{
+  "Header": {
+    "logoText": "oara",
+    "features": "Tính năng",
+    "pricing": "Giá cả",
+    "testimonials": "Lời chứng thực",
+    "faq": "Câu hỏi thường gặp",
+    "toggleMenuAriaLabel": "Chuyển đổi menu"
+  },
+  "Hero": {
+    "badgeLabel": "Thành phần mới nhất",
+    "mainTitle": "Tiếp cận <developers>nhà phát triển</developers> <and>&</and><creators>người sáng tạo</creators> <effortlessly>dễ dàng</effortlessly>",
+    "description": "Các thành phần đẹp, dễ tiếp cận được xây dựng với Tailwind CSS và Framer Motion. Sao chép, dán và tùy chỉnh để xây dựng dự án tiếp theo của bạn nhanh hơn.",
+    "getStartedButton": "Bắt đầu",
+    "socialProofText": "Được tin tưởng bởi các nhà phát triển tại",
+    "tailwindLogoAlt": "Logo Tailwind CSS"
+  },
+  "Features": {
+    "title": "Tính năng",
+    "interactiveFeatures": "Tính năng tương tác",
+    "cliSupportTitle": "Hỗ trợ CLI & Hướng dẫn",
+    "cliSupportDescription": "Tích hợp trang đích của bạn trực tiếp vào sản phẩm trong khi sử dụng các công cụ yêu thích của bạn.",
+    "cliImageAlt": "Arrow-CoreExchange",
+    "globallyUsableTitle": "Sử dụng toàn cầu",
+    "globallyUsableDescription": "Các khối có sẵn ở mọi nơi nhưng của chúng tôi là tốt nhất. Sử dụng chúng trong framework yêu thích của bạn hoặc thậm chí trong HTML thuần.",
+    "globallyUsableScrambleText": "tính năng 2",
+    "smartComponentsTitle": "Thành phần thông minh",
+    "smartComponentsDescription": "Các thành phần thông minh thích ứng với nhu cầu của bạn với các hiệu ứng và tương tác tích hợp sẵn.",
+    "searchPlaceholder": "Tìm kiếm trên web...",
+    "searchButton": "Tìm kiếm",
+    "dynamicLayoutsTitle": "Bố cục động",
+    "dynamicLayoutsDescription": "Các bố cục đáp ứng thay đổi và thích ứng mượt mà trên mọi kích thước thiết bị.",
+    "dynamicLayoutsImageAlt": "Ví dụ bố cục động",
+    "featureItem": "Tính năng 1",
+    "logoAlt": "Logo"
+  },
+  "ServicesSection": {
+    "badgeLabel": "Dịch vụ",
+    "title": "Dịch vụ của chúng tôi",
+    "description": "Khám phá loạt dịch vụ đa dạng mà chúng tôi cung cấp để giúp bạn đạt được mục tiêu.",
+    "slides": {
+      "uiLibrary": "Thư viện giao diện người dùng",
+      "landingBuilder": "Trình tạo trang đích",
+      "cvBuilder": "Trình tạo CV",
+      "webMobileDevelopment": "Phát triển web/di động",
+      "seoOptimization": "Tối ưu hóa SEO"
+    }
+  },
+  "Preview": {
+    "badgeLabel": "Sản phẩm",
+    "footerText": "Sản phẩm."
+  },
+  "PricingSection": {
+    "badgeLabel": "Giá cả",
+    "title": "Chọn gói của bạn",
+    "description": "Bắt đầu xây dựng các thành phần đẹp mắt ngay hôm nay. Nâng cấp bất kỳ lúc nào khi nhu cầu của bạn tăng lên.",
+    "toggleMonthly": "Hàng tháng",
+    "toggleAnnual": "Hàng năm",
+    "saveBadge": "Tiết kiệm 20%",
+    "mostPopular": "Phổ biến nhất",
+    "pricePerMonth": "/tháng",
+    "pricePerYear": "/năm",
+    "bottomCtaDescription": "Cần giải pháp tùy chỉnh? Chúng tôi ở đây để hỗ trợ.",
+    "bottomCtaButton": "Liên hệ với đội ngũ bán hàng →",
+    "plans": {
+      "starter": {
+        "name": "Khởi đầu",
+        "price": "Miễn phí",
+        "description": "Hoàn hảo để bắt đầu với Doara",
+        "features": [
+          "5 thành phần mỗi tháng",
+          "Mẫu cơ bản",
+          "Hỗ trợ cộng đồng",
+          "Thành phần tiêu chuẩn"
+        ],
+        "cta": "Bắt đầu"
+      },
+      "pro": {
+        "name": "Chuyên nghiệp",
+        "description": "Dành cho các chuyên gia xây dựng các dự án nghiêm túc",
+        "features": [
+          "Thành phần không giới hạn",
+          "Mẫu cao cấp",
+          "Hỗ trợ ưu tiên",
+          "Hiệu ứng động nâng cao",
+          "Chủ đề tùy chỉnh",
+          "Xuất sang GitHub"
+        ],
+        "cta": "Bắt đầu dùng thử miễn phí"
+      },
+      "team": {
+        "name": "Nhóm",
+        "description": "Dành cho các nhóm cộng tác trong các dự án",
+        "features": [
+          "Tất cả trong gói Pro",
+          "Cộng tác nhóm",
+          "Thư viện thành phần dùng chung",
+          "Phân tích nâng cao",
+          "Tích hợp tùy chỉnh",
+          "Hỗ trợ chuyên biệt"
+        ],
+        "cta": "Liên hệ với chúng tôi"
+      }
+    }
+  },
+  "TestimonialsSection": {
+    "badgeLabel": "Lời chứng thực",
+    "title": "Người dùng nói gì về chúng tôi",
+    "description": "Từ thiết kế trực quan đến các tính năng mạnh mẽ, ứng dụng của chúng tôi đã trở thành công cụ thiết yếu cho người dùng trên toàn thế giới.",
+    "ctaButton": "Chia sẻ trải nghiệm của bạn",
+    "testimonials": {
+      "testimonial1": {
+        "name": "Arjun Mehta",
+        "username": "@arjdev",
+        "body": "Doara đã hoàn toàn thay đổi cách tôi xây dựng giao diện người dùng. Tạo, sao chép-dán, hoàn tất. Không còn căng thẳng về thiết kế."
+      },
+      "testimonial2": {
+        "name": "Sara Lin",
+        "username": "@sara.codes",
+        "body": "Thực sự bất ngờ với việc các thành phần do Doara tạo ra hoạt động mượt mà ngay từ đầu. Hoạt động hoàn hảo."
+      },
+      "testimonial3": {
+        "name": "Devon Carter",
+        "username": "@devninja",
+        "body": "Nhóm của chúng tôi đã ra mắt một trang web cho khách hàng trong 2 ngày nhờ các thành phần của Doara. Tiết kiệm rất nhiều thời gian phát triển."
+      },
+      "testimonial4": {
+        "name": "Priya Shah",
+        "username": "@priyacodes",
+        "body": "Tạo một vài thành phần trong Doara và mọi thứ hòa quyện hoàn hảo với mã nguồn của chúng tôi. Thắng lớn."
+      },
+      "testimonial5": {
+        "name": "Leo Martin",
+        "username": "@leobuilds",
+        "body": "Tìm thấy một phần hero tuyệt đẹp trong Doara, chỉnh sửa nhanh prompt và triển khai trong 15 phút. Thay đổi cuộc chơi."
+      },
+      "testimonial6": {
+        "name": "Chloe Winters",
+        "username": "@chloewinters",
+        "body": "Doara giúp chúng tôi tạo nguyên mẫu nhiều trang đích mà không cần viết CSS một lần. Thật kỳ diệu."
+      },
+      "testimonial7": {
+        "name": "Ayaan Malik",
+        "username": "@ayaan_dev",
+        "body": "Là một nhà sáng lập đơn lẻ, Doara giúp tôi di chuyển nhanh mà không hy sinh chất lượng thiết kế. Công cụ thiết yếu."
+      },
+      "testimonial8": {
+        "name": "Monica Reeves",
+        "username": "@monicareeves",
+        "body": "Không thể tin nổi các thành phần do Doara tạo ra trông bóng bẩy đến thế nào. Khách hàng ấn tượng mỗi lần."
+      },
+      "testimonial9": {
+        "name": "James Roy",
+        "username": "@jamesrdev",
+        "body": "Doara là cứu tinh khi thời hạn gấp rút. Tạo một thành phần, chỉnh sửa, và triển khai ngay lập tức."
+      }
+    }
+  },
+  "NewReleasePromo": {
+    "title": "Xây dựng. Tùy chỉnh. Triển khai nhanh chóng.",
+    "description": "Được xây dựng để giữ bạn say mê.",
+    "ctaButton": "Bắt đầu",
+    "wordmark": "skiper/ui"
+  },
+  "FAQSection": {
+    "badgeLabel": "Câu hỏi thường gặp",
+    "title": "Có câu hỏi? Chúng tôi có",
+    "titleHighlight": "câu trả lời",
+    "faqs": {
+      "faq1": {
+        "question": "Doara là gì?",
+        "answer": "Doara là một hệ thống giao diện người dùng tạo sinh bằng AI, giúp bạn xây dựng các thành phần React bằng các gợi ý văn bản đơn giản. Nó tạo ra mã sạch, sẵn sàng cho sản xuất mà bạn có thể sao chép và tùy chỉnh cho các dự án của mình."
+      },
+      "faq2": {
+        "question": "Tôi có cần biết Tailwind để sử dụng Doara không?",
+        "answer": "Mặc dù kiến thức cơ bản về Tailwind CSS là hữu ích, nhưng không bắt buộc. Doara tạo ra các thành phần với các lớp Tailwind, và bạn có thể học trong quá trình sử dụng. Mã được tạo ra sạch sẽ và có cấu trúc tốt, dễ hiểu và chỉnh sửa."
+      },
+      "faq3": {
+        "question": "Tôi có thể sử dụng các thành phần này cho mục đích thương mại không?",
+        "answer": "Có! Tất cả các thành phần được tạo bởi Doara đều có thể sử dụng trong các dự án thương mại. Bạn sở hữu mã được tạo ra, và không có hạn chế giấy phép khi sử dụng trong ứng dụng của bạn."
+      },
+      "faq4": {
+        "question": "Các thành phần có đáp ứng và dễ tiếp cận không?",
+        "answer": "Hoàn toàn đúng. Doara tạo ra các thành phần đáp ứng theo mặc định và tuân thủ các phương pháp tốt nhất về khả năng tiếp cận. Tất cả các thành phần bao gồm các thuộc tính ARIA phù hợp, điều hướng bằng bàn phím và cấu trúc HTML ngữ nghĩa."
+      },
+      "faq5": {
+        "question": "Làm thế nào để tích hợp một thành phần vào dự án của tôi?",
+        "answer": "Chỉ cần sao chép mã được tạo và dán vào dự án React của bạn. Doara cung cấp hướng dẫn cài đặt cho bất kỳ phụ thuộc nào cần thiết, và các thành phần được thiết kế để hoạt động mượt mà với các framework React hiện đại như Next.js."
+      }
+    }
+  },
+  "ContactSection": {
+    "title": "Liên hệ với chúng tôi",
+    "description": "Nếu bạn có bất kỳ câu hỏi nào về Dịch vụ của chúng tôi hoặc cần hỗ trợ, vui lòng điền vào biểu mẫu tại đây. Chúng tôi cố gắng trả lời trong vòng 1 ngày làm việc.",
+    "contactInfo": {
+      "email": {
+        "label": "Email",
+        "value": "contact@21st.dev"
+      },
+      "phone": {
+        "label": "Điện thoại",
+        "value": "+92 312 1234567"
+      },
+      "address": {
+        "label": "Địa chỉ",
+        "value": "Faisalabad, Pakistan"
+      }
+    },
+    "form": {
+      "name": "Tên",
+      "email": "Email",
+      "phone": "Điện thoại",
+      "message": "Tin nhắn",
+      "submit": "Gửi"
+    }
+  },
+  "HoverFooter": {
+    "brandName": "oara",
+    "brandDescription": "Nur UI là một thư viện thành phần giao diện người dùng hiện đại dựa trên React và Next.js.",
+    "contactTitle": "Liên hệ với chúng tôi",
+    "copyright": "© {year} Doaraui. Mọi quyền được bảo lưu.",
+    "textHover": "DOARA",
+    "links": {
+      "aboutUs": {
+        "title": "Về chúng tôi",
+        "links": {
+          "companyHistory": "Lịch sử công ty",
+          "meetTheTeam": "Gặp gỡ đội ngũ",
+          "employeeHandbook": "Sổ tay nhân viên",
+          "careers": "Cơ hội nghề nghiệp"
+        }
+      },
+      "helpfulLinks": {
+        "title": "Liên kết hữu ích",
+        "links": {
+          "faqs": "Câu hỏi thường gặp",
+          "support": "Hỗ trợ",
+          "liveChat": "Trò chuyện trực tiếp"
+        }
+      }
+    },
+    "contactInfo": {
+      "email": {
+        "text": "doara-support@gmail.com"
+      },
+      "phone": {
+        "text": "+91 86373 73116"
+      },
+      "address": {
+        "text": "Tam Kỳ, Quảng Nam"
+      }
+    },
+    "socialLinks": {
+      "facebook": "Facebook",
+      "instagram": "Instagram",
+      "twitter": "Twitter",
+      "dribbble": "Dribbble",
+      "globe": "Website"
+    }
+  }
+
+}

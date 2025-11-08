@@ -1,0 +1,261 @@
+{
+  "Header": {
+    "logoText": "oara",
+    "features": "Features",
+    "pricing": "Pricing",
+    "testimonials": "Testimonials",
+    "faq": "FAQ",
+    "toggleMenuAriaLabel": "Toggle menu"
+  },
+  "Hero": {
+    "badgeLabel": "Latest component",
+    "mainTitle": "Reach <developers>developers</developers> <and>&</and><creators>creators</creators> <effortlessly>effortlessly</effortlessly>",
+    "description": "Beautiful, accessible components built with Tailwind CSS and Framer Motion. Copy, paste, and customize to build your next project faster.",
+    "getStartedButton": "Get started",
+    "socialProofText": "Trusted by developers at",
+    "tailwindLogoAlt": "Tailwind CSS Logo"
+  },
+  "Features": {
+    "title": "Features",
+    "interactiveFeatures": "Interactive Features",
+    "cliSupportTitle": "CLI & Manual Support",
+    "cliSupportDescription": "Integrate your landing page directly in the product while using your favorite tools.",
+    "cliImageAlt": "Arrow-CoreExchange",
+    "globallyUsableTitle": "Globally Usable",
+    "globallyUsableDescription": "Blocks are available everywhere but ours are the best. Use them in your favorite framework or even in plain HTML.",
+    "globallyUsableScrambleText": "feature-2",
+    "smartComponentsTitle": "Smart Components",
+    "smartComponentsDescription": "Intelligent components that adapt to your needs with built-in animations and interactions.",
+    "searchPlaceholder": "Search the web...",
+    "searchButton": "Search",
+    "dynamicLayoutsTitle": "Dynamic Layouts",
+    "dynamicLayoutsDescription": "Responsive layouts that transform and adapt seamlessly across all device sizes.",
+    "dynamicLayoutsImageAlt": "Dynamic Layout Example",
+    "featureItem": "Feature-1",
+    "logoAlt": "Logo"
+  },
+  "ServicesSection": {
+    "badgeLabel":"Services",
+    "title": "Our Services",
+    "description": "Explore the wide range of services we offer to help you achieve your goals.",
+    "slides": {
+      "uiLibrary": "UI LIBRARY",
+      "landingBuilder": "LANDING BULDER",
+      "cvBuilder": "CV BUILDER",
+      "webMobileDevelopment": "WEB/MOBILE DEVELOPMENT",
+      "seoOptimization": "SEO optimization"
+    }
+  },
+    "Preview": {
+        "badgeLabel": "Products",
+        "footerText": "Products."
+    },
+    "PricingSection": {
+    "badgeLabel": "Pricing",
+    "title": "Choose your plan",
+    "description": "Start building beautiful components today. Upgrade anytime as your needs grow.",
+    "toggleMonthly": "Monthly",
+    "toggleAnnual": "Annual",
+    "saveBadge": " Delegate to Assistant: Save 20%",
+    "mostPopular": "Most Popular",
+    "pricePerMonth": "/month",
+    "pricePerYear": "/year",
+    "bottomCtaDescription": "Need a custom solution? We're here to help.",
+    "bottomCtaButton": "Contact our sales team →",
+    "plans": {
+      "starter": {
+        "name": "Starter",
+        "price": "Free",
+        "description": "Perfect for getting started with Doara",
+        "features": [
+          "5 components per month",
+          "Basic templates",
+          "Community support",
+          "Standard components"
+        ],
+        "cta": "Get Started"
+      },
+      "pro": {
+        "name": "Pro",
+        "description": "For professionals building serious projects",
+        "features": [
+          "Unlimited components",
+          "Premium templates",
+          "Priority support",
+          "Advanced animations",
+          "Custom themes",
+          "Export to GitHub"
+        ],
+        "cta": "Start Free Trial"
+      },
+      "team": {
+        "name": "Team",
+        "description": "For teams collaborating on projects",
+        "features": [
+          "Everything in Pro",
+          "Team collaboration",
+          "Shared component library",
+          "Advanced analytics",
+          "Custom integrations",
+          "Dedicated support"
+        ],
+        "cta": "Contact Sales"
+      }
+    }
+  },
+  "TestimonialsSection": {
+    "badgeLabel": "Testimonials",
+    "title": "What our users say",
+    "description": "From intuitive design to powerful features, our app has become an essential tool for users around the world.",
+    "ctaButton": "Share your experience",
+    "testimonials": {
+      "testimonial1": {
+        "name": "Arjun Mehta",
+        "username": "@arjdev",
+        "body": "doara has completely changed the way I build UIs. Generate, copy-paste, done. No more design stress."
+      },
+      "testimonial2": {
+        "name": "Sara Lin",
+        "username": "@sara.codes",
+        "body": "Honestly shocked at how smooth the Doara generated components are out of the box. Just works Maybeperfectly."
+      },
+      "testimonial3": {
+        "name": "Devon Carter",
+        "username": "@devninja",
+        "body": "Our team launched a client site in 2 days using Doara components. Saved so much development time."
+      },
+      "testimonial4": {
+        "name": "Priya Shah",
+        "username": "@priyacodes",
+        "body": "Generated a few components in Doara and everything blended perfectly with our codebase. Massive W."
+      },
+      "testimonial5": {
+        "name": "Leo Martin",
+        "username": "@leobuilds",
+        "body": "Found a beautiful hero section in Doara, tweaked the prompt, and shipped in 15 minutes. Game changer."
+      },
+      "testimonial6": {
+        "name": "Chloe Winters",
+        "username": "@chloewinters",
+        "body": "Doara helped us prototype multiple landing pages without writing CSS once. Pure magic."
+      },
+      "testimonial7": {
+        "name": "Ayaan Malik",
+        "username": "@ayaan_dev",
+        "body": "As a solo founder, Doara lets me move fast without sacrificing design quality. Essential tool."
+      },
+      "testimonial8": {
+        "name": "Monica Reeves",
+        "username": "@monicareeves",
+        "body": "Can't believe how polished the Doara generated components look. Clients are impressed every time."
+      },
+      "testimonial9": {
+        "name": "James Roy",
+        "username": "@jamesrdev",
+        "body": "Doara is a lifesaver when deadlines are tight. Generate a component, tweak, and deploy instantly."
+      }
+    }
+  },
+  "NewReleasePromo": {
+    "title": "Build. Customize. Deploy Quickly.",
+    "description": "Built to keep you hooked.",
+    "ctaButton": "Get started",
+    "wordmark": "skiper/ui"
+  },
+  "FAQSection": {
+    "badgeLabel": "Faqs",
+    "title": "Questions? We've got",
+    "titleHighlight": "answers",
+    "faqs": {
+      "faq1": {
+        "question": "What is Doara exactly?",
+        "answer": "Doara is an AI-powered generative user interface system that helps you build React components using simple text prompts. It generates clean, production-ready code that you can copy and customize for your projects."
+      },
+      "faq2": {
+        "question": "Do I need to know Tailwind to use it?",
+        "answer": "While basic knowledge of Tailwind CSS is helpful, it's not required. Doara generates components with Tailwind classes, and you can learn as you go. The generated code is clean and well-structured, making it easy to understand and modify."
+      },
+      "faq3": {
+        "question": "Can I use these components commercially?",
+        "answer": "Yes! All components generated by Doara can be used in commercial projects. You own the code that's generated, and there are no licensing restrictions on using it in your applications."
+      },
+      "faq4": {
+        "question": "Are the components responsive and accessible?",
+        "answer": "Absolutely. Doara generates components that are responsive by default and follow accessibility best practices. All components include proper ARIA attributes, keyboard navigation, and semantic HTML structure."
+      },
+      "faq5": {
+        "question": "How do I integrate a component into my project?",
+        "answer": "Simply copy the generated code and paste it into your React project. Doara provides installation instructions for any required dependencies, and the components are designed to work seamlessly with modern React frameworks like Next.js."
+      }
+    }
+  },
+  "ContactSection": {
+    "title": "Get in touch",
+    "description": "If you have any questions regarding our Services or need help, please fill out the form here. We do our best to respond within 1 business day.",
+    "contactInfo": {
+      "email": {
+        "label": "Email",
+        "value": "contact@21st.dev"
+      },
+      "phone": {
+        "label": "Phone",
+        "value": "+92 312 1234567"
+      },
+      "address": {
+        "label": "Address",
+        "value": "Faisalabad, Pakistan"
+      }
+    },
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone",
+      "message": "Message",
+      "submit": "Submit"
+    }
+  },
+  "HoverFooter": {
+    "brandName": "oara",
+    "brandDescription": "Nur UI is a modern React and Next.js based UI component library.",
+    "contactTitle": "Contact Us",
+    "copyright": "© {year} Doaraui. All rights reserved.",
+    "textHover": "DOARA",
+    "links": {
+      "aboutUs": {
+        "title": "About Us",
+        "links": {
+          "companyHistory": "Company History",
+          "meetTheTeam": "Meet the Team",
+          "employeeHandbook": "Employee Handbook",
+          "careers": "Careers"
+        }
+      },
+      "helpfulLinks": {
+        "title": "Helpful Links",
+        "links": {
+          "faqs": "FAQs",
+          "support": "Support",
+          "liveChat": "Live Chat"
+        }
+      }
+    },
+    "contactInfo": {
+      "email": {
+        "text": "doara-support@gmail.com"
+      },
+      "phone": {
+        "text": "+91 86373 73116"
+      },
+      "address": {
+        "text": "Tam kỳ, Quảng Nam"
+      }
+    },
+    "socialLinks": {
+      "facebook": "Facebook",
+      "instagram": "Instagram",
+      "twitter": "Twitter",
+      "dribbble": "Dribbble",
+      "globe": "Globe"
+    }
+  }
+}

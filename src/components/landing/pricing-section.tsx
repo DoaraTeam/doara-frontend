@@ -3,57 +3,31 @@
 import { motion } from "framer-motion";
 import { Check, Sparkles } from "lucide-react";
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 
 const pricingPlans = [
   {
-    name: "Starter",
+    key: "starter",
     price: "Free",
-    description: "Perfect for getting started with Doara",
-    features: [
-      "5 components per month",
-      "Basic templates",
-      "Community support",
-      "Standard components",
-    ],
     popular: false,
-    cta: "Get Started",
   },
   {
-    name: "Pro",
+    key: "pro",
     monthlyPrice: 29,
     annualPrice: 24,
-    description: "For professionals building serious projects",
-    features: [
-      "Unlimited components",
-      "Premium templates",
-      "Priority support",
-      "Advanced animations",
-      "Custom themes",
-      "Export to GitHub",
-    ],
     popular: true,
-    cta: "Start Free Trial",
   },
   {
-    name: "Team",
+    key: "team",
     monthlyPrice: 99,
     annualPrice: 79,
-    description: "For teams collaborating on projects",
-    features: [
-      "Everything in Pro",
-      "Team collaboration",
-      "Shared component library",
-      "Advanced analytics",
-      "Custom integrations",
-      "Dedicated support",
-    ],
     popular: false,
-    cta: "Contact Sales",
   },
 ];
 
 export function PricingSection() {
   const [isAnnual, setIsAnnual] = useState(false);
+  const t = useTranslations("PricingSection");
 
   return (
     <section className="relative py-24 px-4">
@@ -74,16 +48,14 @@ export function PricingSection() {
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-muted/20 border border-border/50 backdrop-blur-sm mb-6"
           >
             <Sparkles className="w-4 h-4 text-primary" />
-            <span className="text-sm font-medium text-foreground/80">Pricing</span>
+            <span className="text-sm font-medium text-foreground/80">{t("badgeLabel")}</span>
           </motion.div>
 
           <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-foreground via-foreground to-foreground/60 bg-clip-text text-transparent mb-4">
-            Choose your plan
+            {t("title")}
           </h2>
 
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
-            Start building beautiful components today. Upgrade anytime as your needs grow.
-          </p>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">{t("description")}</p>
 
           {/* Monthly/Annual Toggle */}
           <motion.div
@@ -101,7 +73,7 @@ export function PricingSection() {
                   : "text-muted-foreground hover:text-foreground"
               }`}
             >
-              Monthly
+              {t("toggleMonthly")}
             </button>
             <button
               onClick={() => setIsAnnual(true)}
@@ -111,9 +83,9 @@ export function PricingSection() {
                   : "text-muted-foreground hover:text-foreground"
               }`}
             >
-              Annual
+              {t("toggleAnnual")}
               <span className="absolute -top-2 -right-2 bg-green-500 text-white text-xs px-2 py-0.5 rounded-full">
-                Save 20%
+                {t("saveBadge")}
               </span>
             </button>
           </motion.div>
@@ -123,7 +95,7 @@ export function PricingSection() {
         <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {pricingPlans.map((plan, index) => (
             <motion.div
-              key={plan.name}
+              key={plan.key}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -138,37 +110,45 @@ export function PricingSection() {
               {plan.popular && (
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                   <div className="bg-gradient-to-r from-primary to-primary/80 text-primary-foreground text-sm font-medium px-4 py-2 rounded-full">
-                    Most Popular
+                    {t("mostPopular")}
                   </div>
                 </div>
               )}
 
               <div className="text-center mb-8">
-                <h3 className="text-xl font-bold text-foreground mb-2">{plan.name}</h3>
+                <h3 className="text-xl font-bold text-foreground mb-2">
+                  {t(`plans.${plan.key}.name`)}
+                </h3>
                 <div className="flex items-baseline justify-center gap-1 mb-2">
                   {plan.price ? (
-                    <span className="text-4xl font-bold text-foreground">{plan.price}</span>
+                    <span className="text-4xl font-bold text-foreground">
+                      {t(`plans.${plan.key}.price`)}
+                    </span>
                   ) : (
                     <>
                       <span className="text-4xl font-bold text-foreground">
                         ${isAnnual ? plan.annualPrice : plan.monthlyPrice}
                       </span>
                       <span className="text-muted-foreground text-lg">
-                        {isAnnual ? "/year" : "/month"}
+                        {t(isAnnual ? "pricePerYear" : "pricePerMonth")}
                       </span>
                     </>
                   )}
                 </div>
-                <p className="text-muted-foreground text-sm">{plan.description}</p>
+                <p className="text-muted-foreground text-sm">
+                  {t(`plans.${plan.key}.description`)}
+                </p>
               </div>
 
               <ul className="space-y-4 mb-8">
-                {plan.features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="flex items-center gap-3">
-                    <Check className="w-5 h-5 text-primary flex-shrink-0" />
-                    <span className="text-foreground/80 text-sm">{feature}</span>
-                  </li>
-                ))}
+                {t
+                  .raw(`plans.${plan.key}.features`)
+                  .map((feature: string, featureIndex: number) => (
+                    <li key={featureIndex} className="flex items-center gap-3">
+                      <Check className="w-5 h-5 text-primary flex-shrink-0" />
+                      <span className="text-foreground/80 text-sm">{feature}</span>
+                    </li>
+                  ))}
               </ul>
 
               <motion.button
@@ -180,7 +160,7 @@ export function PricingSection() {
                     : "bg-muted/30 text-foreground border border-border hover:bg-muted/50"
                 }`}
               >
-                {plan.cta}
+                {t(`plans.${plan.key}.cta`)}
               </motion.button>
             </motion.div>
           ))}
@@ -194,15 +174,13 @@ export function PricingSection() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="text-center mt-16"
         >
-          <p className="text-muted-foreground mb-4">
-            Need a custom solution? We&apos;re here to help.
-          </p>
+          <p className="text-muted-foreground mb-4">{t("bottomCtaDescription")}</p>
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="text-primary hover:text-primary/80 font-medium transition-colors"
           >
-            Contact our sales team →
+            {t("bottomCtaButton")}
           </motion.button>
         </motion.div>
       </div>

@@ -1,13 +1,16 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 import { ThemeToggle } from "../theme-toggle";
+import { LanguageSwitcher } from "../blocks/language-switcher";
 
 interface HeaderProps {
   isScrolled: boolean;
 }
 
 export function Header({ isScrolled }: HeaderProps) {
+  const t = useTranslations("Header");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const handleMobileNavClick = (elementId: string) => {
@@ -63,8 +66,8 @@ export function Header({ isScrolled }: HeaderProps) {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Image src="/images/doara-logo.png" height="20" width="20" alt="logo" />
-          <span className="text-[#29A9D6] text-xl font-bold">oara</span>
+          <Image src="/images/doara-logo.png" height="20" width="20" alt={t("logoText")} />
+          <span className="text-[#29A9D6] text-xl font-bold">{t("logoText")}</span>
         </a>
 
         <div className="absolute inset-0 hidden flex-1 flex-row items-center justify-center space-x-2 text-sm font-medium text-muted-foreground transition duration-200 hover:text-foreground md:flex md:space-x-2">
@@ -75,7 +78,7 @@ export function Header({ isScrolled }: HeaderProps) {
               scrollToSection("features");
             }}
           >
-            <span className="relative z-20">Features</span>
+            <span className="relative z-20">{t("features")}</span>
           </a>
           <a
             className="relative px-4 py-2 text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
@@ -84,7 +87,7 @@ export function Header({ isScrolled }: HeaderProps) {
               scrollToSection("pricing");
             }}
           >
-            <span className="relative z-20">Pricing</span>
+            <span className="relative z-20">{t("pricing")}</span>
           </a>
           <a
             className="relative px-4 py-2 text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
@@ -93,7 +96,7 @@ export function Header({ isScrolled }: HeaderProps) {
               scrollToSection("testimonials");
             }}
           >
-            <span className="relative z-20">Testimonials</span>
+            <span className="relative z-20">{t("testimonials")}</span>
           </a>
           <a
             className="relative px-4 py-2 text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
@@ -102,26 +105,13 @@ export function Header({ isScrolled }: HeaderProps) {
               scrollToSection("faq");
             }}
           >
-            <span className="relative z-20">FAQ</span>
+            <span className="relative z-20">{t("faq")}</span>
           </a>
         </div>
 
         <div className="flex items-center gap-3">
           <ThemeToggle />
-
-          {/* <a
-            href="/login"
-            className="font-medium transition-colors hover:text-foreground text-muted-foreground text-sm cursor-pointer"
-          >
-            Log In
-          </a>
-
-          <a
-            href="/signup"
-            className="rounded-full font-bold relative cursor-pointer hover:-translate-y-0.5 transition duration-200 inline-block text-center bg-gradient-to-b from-primary to-primary/80 text-primary-foreground shadow-[0px_2px_0px_0px_rgba(255,255,255,0.3)_inset] px-4 py-2 text-sm"
-          >
-            Sign Up
-          </a> */}
+          <LanguageSwitcher />
         </div>
       </header>
 
@@ -133,7 +123,7 @@ export function Header({ isScrolled }: HeaderProps) {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Image src="/images/doara-logo.png" height="20" width="20" alt="logo" />
+          <Image src="/images/doara-logo.png" height="20" width="20" alt={t("logoText")} />
         </a>
 
         <div className="flex items-center gap-2">
@@ -142,7 +132,7 @@ export function Header({ isScrolled }: HeaderProps) {
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="flex items-center justify-center w-10 h-10 rounded-full bg-background/50 border border-border/50 transition-colors hover:bg-background/80"
-            aria-label="Toggle menu"
+            aria-label={t("toggleMenuAriaLabel")}
           >
             <div className="flex flex-col items-center justify-center w-5 h-5 space-y-1">
               <span
@@ -168,40 +158,26 @@ export function Header({ isScrolled }: HeaderProps) {
                 onClick={() => handleMobileNavClick("features")}
                 className="text-left px-4 py-3 text-lg font-medium text-muted-foreground hover:text-foreground transition-colors rounded-lg hover:bg-background/50"
               >
-                Features
+                {t("features")}
               </button>
               <button
                 onClick={() => handleMobileNavClick("pricing")}
                 className="text-left px-4 py-3 text-lg font-medium text-muted-foreground hover:text-foreground transition-colors rounded-lg hover:bg-background/50"
               >
-                Pricing
+                {t("pricing")}
               </button>
               <button
                 onClick={() => handleMobileNavClick("testimonials")}
                 className="text-left px-4 py-3 text-lg font-medium text-muted-foreground hover:text-foreground transition-colors rounded-lg hover:bg-background/50"
               >
-                Testimonials
+                {t("testimonials")}
               </button>
               <button
                 onClick={() => handleMobileNavClick("faq")}
                 className="text-left px-4 py-3 text-lg font-medium text-muted-foreground hover:text-foreground transition-colors rounded-lg hover:bg-background/50"
               >
-                FAQ
+                {t("faq")}
               </button>
-              {/* <div className="border-t border-border/50 pt-4 mt-4 flex flex-col space-y-3">
-                <a
-                  href="/login"
-                  className="px-4 py-3 text-lg font-medium text-muted-foreground hover:text-foreground transition-colors rounded-lg hover:bg-background/50 cursor-pointer"
-                >
-                  Log In
-                </a>
-                <a
-                  href="/signup"
-                  className="px-4 py-3 text-lg font-bold text-center bg-gradient-to-b from-primary to-primary/80 text-primary-foreground rounded-lg shadow-lg hover:-translate-y-0.5 transition-all duration-200"
-                >
-                  Sign Up
-                </a>
-              </div> */}
             </nav>
           </div>
         </div>

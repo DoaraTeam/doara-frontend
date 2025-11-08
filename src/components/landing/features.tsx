@@ -3,6 +3,7 @@
 import type React from "react";
 
 import { useTheme } from "next-themes";
+import { useTranslations } from "next-intl";
 import Earth from "@/components/ui/globe";
 import ScrambleHover from "@/components/ui/scramble";
 import { FollowerPointerCard } from "@/components/ui/following-pointer";
@@ -25,6 +26,7 @@ export default function Features() {
   const [glowColor, setGlowColor] = useState<[number, number, number]>([0.1608, 0.6627, 0.8392]); // #29A9D6 in RGB normalized
 
   const [dark, setDark] = useState<number>(theme === "dark" ? 1 : 0);
+  const t = useTranslations("Features");
 
   useEffect(() => {
     setBaseColor([0.1608, 0.6627, 0.8392]); // #29A9D6
@@ -59,13 +61,13 @@ export default function Features() {
             geist.className
           )}
         >
-          Features
+          {t("title")}
         </h2>
         <FollowerPointerCard
           title={
             <div className="flex items-center gap-2">
               <span>✨</span>
-              <span>Interactive Features</span>
+              <span>{t("interactiveFeatures")}</span>
             </div>
           }
         >
@@ -89,13 +91,10 @@ export default function Features() {
               >
                 <div className="flex flex-col gap-4">
                   <h3 className="text-2xl leading-none font-semibold tracking-tight">
-                    CLI & Manual Support
+                    {t("cliSupportTitle")}
                   </h3>
                   <div className="text-md text-muted-foreground flex flex-col gap-2 text-sm">
-                    <p className="max-w-[460px]">
-                      Integrate your landing page directly in the product while using your favorite
-                      tools.
-                    </p>
+                    <p className="max-w-[460px]">{t("cliSupportDescription")}</p>
                   </div>
                 </div>
                 <div className="pointer-events-none flex grow items-center justify-center select-none relative">
@@ -107,7 +106,7 @@ export default function Features() {
                     <div className="absolute inset-0">
                       <img
                         src="images/cubit.png"
-                        alt="Arrow-CoreExchange"
+                        alt={t("cliImageAlt")}
                         className="w-full h-full object-cover rounded-xl"
                       />
                     </div>
@@ -168,7 +167,7 @@ export default function Features() {
                       <div className="flex items-center gap-8">
                         {/* Left Column */}
                         <div className="flex flex-col gap-3">
-                          {["Feature-1", "Feature-1", "Feature-1"].map((item, index) => (
+                          {["featureItem", "featureItem", "featureItem"].map((item, index) => (
                             <motion.div
                               key={`left-${index}`}
                               className="bg-white rounded px-3 py-2 flex items-center gap-2 text-black text-sm font-medium shadow-sm"
@@ -185,7 +184,7 @@ export default function Features() {
                                 {index === 1 && <span className="text-xs">💰</span>}
                                 {index === 2 && <span className="text-xs">🏢</span>}
                               </div>
-                              {item}
+                              {t(item)}
                             </motion.div>
                           ))}
                         </div>
@@ -200,14 +199,14 @@ export default function Features() {
                         >
                           <img
                             src="/images/doara-logo-bg.png"
-                            alt="Logo"
+                            alt={t("logoAlt")}
                             className="w-full h-full object-cover"
                           />
                         </motion.div>
 
                         {/* Right Column */}
                         <div className="flex flex-col gap-3">
-                          {["Feature-1", "Feature-1", "Feature-1"].map((item, index) => (
+                          {["featureItem", "featureItem", "featureItem"].map((item, index) => (
                             <motion.div
                               key={`right-${index}`}
                               className="bg-white rounded px-3 py-2 flex items-center gap-2 text-black text-sm font-medium shadow-sm"
@@ -224,7 +223,7 @@ export default function Features() {
                                 {index === 1 && <span className="text-xs">💳</span>}
                                 {index === 2 && <span className="text-xs">👨‍⚕️</span>}
                               </div>
-                              {item}
+                              {t(item)}
                             </motion.div>
                           ))}
                         </div>
@@ -284,20 +283,17 @@ export default function Features() {
               >
                 <div className="flex flex-col gap-4">
                   <h3 className="text-2xl leading-none font-semibold tracking-tight">
-                    Globally Usable
+                    {t("globallyUsableTitle")}
                   </h3>
                   <div className="text-md text-muted-foreground flex flex-col gap-2 text-sm">
-                    <p className="max-w-[460px]">
-                      Blocks are available everywhere but ours are the best. Use them in your
-                      favorite framework or even in plain HTML.
-                    </p>
+                    <p className="max-w-[460px]">{t("globallyUsableDescription")}</p>
                   </div>
                 </div>
                 <div className="flex min-h-[300px] grow items-start justify-center select-none">
                   <h1 className="mt-8 text-center text-5xl leading-[100%] font-semibold sm:leading-normal lg:mt-12 lg:text-6xl">
                     <span className='bg-background relative mt-3 inline-block w-fit rounded-md border px-1.5 py-0.5 before:absolute before:top-0 before:left-0 before:z-10 before:h-full before:w-full before:bg-[url("/noise.gif")] before:opacity-[0.09] before:content-[""]'>
                       <ScrambleHover
-                        text="feature-2"
+                        text={t("globallyUsableScrambleText")}
                         scrambleSpeed={70}
                         maxIterations={20}
                         useOriginalCharsOnly={false}
@@ -348,13 +344,10 @@ export default function Features() {
               >
                 <div className="flex flex-col gap-4">
                   <h3 className="text-2xl leading-none font-semibold tracking-tight">
-                    Smart Components
+                    {t("smartComponentsTitle")}
                   </h3>
                   <div className="text-md text-muted-foreground flex flex-col gap-2 text-sm">
-                    <p className="max-w-[460px]">
-                      Intelligent components that adapt to your needs with built-in animations and
-                      interactions.
-                    </p>
+                    <p className="max-w-[460px]">{t("smartComponentsDescription")}</p>
                   </div>
                 </div>
                 <div className="flex grow items-center justify-center select-none relative min-h-[300px] p-4">
@@ -363,7 +356,7 @@ export default function Features() {
                       <div className="p-4">
                         <textarea
                           className="w-full min-h-[100px] bg-transparent border-none text-foreground placeholder:text-muted-foreground resize-none focus:outline-none text-base leading-relaxed"
-                          placeholder="Search the web..."
+                          placeholder={t("searchPlaceholder")}
                           value={inputValue}
                           onChange={(e) => setInputValue(e.target.value)}
                           onKeyDown={handleKeyDown}
@@ -403,7 +396,7 @@ export default function Features() {
                               <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
                               <path d="M2 12h20"></path>
                             </svg>
-                            Search
+                            {t("searchButton")}
                           </button>
                         </div>
                         <button className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors">
@@ -447,20 +440,17 @@ export default function Features() {
               >
                 <div className="flex flex-col gap-4">
                   <h3 className="text-2xl leading-none font-semibold tracking-tight">
-                    Dynamic Layouts
+                    {t("dynamicLayoutsTitle")}
                   </h3>
                   <div className="text-md text-muted-foreground flex flex-col gap-2 text-sm">
-                    <p className="max-w-[460px]">
-                      Responsive layouts that transform and adapt seamlessly across all device
-                      sizes.
-                    </p>
+                    <p className="max-w-[460px]">{t("dynamicLayoutsDescription")}</p>
                   </div>
                 </div>
                 <div className="flex grow items-center justify-center select-none relative min-h-[300px] p-4">
                   <div className="relative w-full max-w-sm">
                     <img
                       src="images/dynamic-component.png"
-                      alt="Dynamic Layout Example"
+                      alt={t("dynamicLayoutsImageAlt")}
                       className="w-full h-auto rounded-lg shadow-lg"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-lg"></div>

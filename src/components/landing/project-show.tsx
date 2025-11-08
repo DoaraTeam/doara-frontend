@@ -5,6 +5,7 @@ import { motion, stagger, useAnimate } from "framer-motion";
 
 import Floating, { FloatingElement } from "@/components/ui/parallax-floating";
 import { Sparkles } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 const exampleImages = [
   {
@@ -59,6 +60,7 @@ const exampleImages = [
 
 const Preview = () => {
   const [scope, animate] = useAnimate();
+  const t = useTranslations("Preview");
 
   useEffect(() => {
     animate("img", { opacity: [0, 1] }, { duration: 0.5, delay: stagger(0.15) });
@@ -76,7 +78,7 @@ const Preview = () => {
           className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-muted/20 border border-border/50 backdrop-blur-sm"
         >
           <Sparkles className="w-4 h-4 text-primary" />
-          <span className="text-sm font-medium text-foreground/80">Product</span>
+          <span className="text-sm font-medium text-foreground/80">{t(`badgeLabel`)}</span>
         </motion.div>
       </div>
 
@@ -279,7 +281,9 @@ const Preview = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.88, delay: 1.5 }}
         >
-          <p className="text-5xl md:text-7xl text-foreground font-calendas italic">Product.</p>
+          <p className="text-5xl md:text-7xl text-foreground font-calendas italic">
+            {t(`footerText`)}
+          </p>
         </motion.div>
       </div>
     </section>
