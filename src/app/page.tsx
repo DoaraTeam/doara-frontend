@@ -1,15 +1,16 @@
 "use client";
 import { useState, useEffect } from "react";
-import Hero from "@/components/home/hero";
-import Features from "@/components/features";
-import { TestimonialsSection } from "@/components/testimonials";
-import { NewReleasePromo } from "@/components/new-release-promo";
-import { FAQSection } from "@/components/faq-section";
-import { PricingSection } from "@/components/pricing-section";
-import { HoverFooter } from "@/components/footer";
-import { Header } from "@/components/header";
-import { Preview } from "@/components/project-show";
-import { ServicesSection } from "@/components/service-section";
+import Hero from "@/components/landing/hero";
+import Features from "@/components/landing/features";
+import { TestimonialsSection } from "@/components/landing/testimonials";
+import { NewReleasePromo } from "@/components/landing/new-release-promo";
+import { FAQSection } from "@/components/landing/faq-section";
+import { PricingSection } from "@/components/landing/pricing-section";
+import { HoverFooter } from "@/components/landing/footer";
+import { Header } from "@/components/landing/header";
+import { Preview } from "@/components/landing/project-show";
+import { ServicesSection } from "@/components/landing/service-section";
+import ContactSection from "@/components/landing/contact-section";
 
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -70,6 +71,12 @@ export default function Home() {
       {/* FAQ Section */}
       <div id="faq">
         <FAQSection />
+      </div>
+
+      {/* contact section */}
+
+      <div id="contact">
+        <ContactSection />
       </div>
 
       {/* Hover Footer */}

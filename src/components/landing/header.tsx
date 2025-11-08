@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
-import { ThemeToggle } from "./theme-toggle";
+import { ThemeToggle } from "../theme-toggle";
 
 interface HeaderProps {
   isScrolled: boolean;
@@ -109,7 +109,7 @@ export function Header({ isScrolled }: HeaderProps) {
         <div className="flex items-center gap-3">
           <ThemeToggle />
 
-          <a
+          {/* <a
             href="/login"
             className="font-medium transition-colors hover:text-foreground text-muted-foreground text-sm cursor-pointer"
           >
@@ -121,7 +121,7 @@ export function Header({ isScrolled }: HeaderProps) {
             className="rounded-full font-bold relative cursor-pointer hover:-translate-y-0.5 transition duration-200 inline-block text-center bg-gradient-to-b from-primary to-primary/80 text-primary-foreground shadow-[0px_2px_0px_0px_rgba(255,255,255,0.3)_inset] px-4 py-2 text-sm"
           >
             Sign Up
-          </a>
+          </a> */}
         </div>
       </header>
 
@@ -188,7 +188,7 @@ export function Header({ isScrolled }: HeaderProps) {
               >
                 FAQ
               </button>
-              <div className="border-t border-border/50 pt-4 mt-4 flex flex-col space-y-3">
+              {/* <div className="border-t border-border/50 pt-4 mt-4 flex flex-col space-y-3">
                 <a
                   href="/login"
                   className="px-4 py-3 text-lg font-medium text-muted-foreground hover:text-foreground transition-colors rounded-lg hover:bg-background/50 cursor-pointer"
@@ -201,7 +201,7 @@ export function Header({ isScrolled }: HeaderProps) {
                 >
                   Sign Up
                 </a>
-              </div>
+              </div> */}
             </nav>
           </div>
         </div>
