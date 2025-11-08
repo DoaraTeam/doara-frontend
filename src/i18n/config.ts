@@ -6,18 +6,18 @@ export const i18nConfig = {
 export type Locale = (typeof i18nConfig.locales)[number];
 
 export const localeNames: Record<Locale, string> = {
-  vi: "vi",
-  en: "en",
+  vi: "Tiếng Việt",
+  en: "English",
 };
 
 export const localeNamesInContext: Record<Locale, Record<Locale, string>> = {
   vi: {
-    vi: "vi",
-    en: "en",
+    vi: "Tiếng Việt",
+    en: "English",
   },
   en: {
-    vi: "vi",
-    en: "en",
+    vi: "Tiếng Việt",
+    en: "English",
   },
 };
 

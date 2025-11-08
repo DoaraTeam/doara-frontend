@@ -3,8 +3,8 @@
     "logoText": "oara",
     "features": "Tính năng",
     "pricing": "Giá cả",
-    "testimonials": "Lời chứng thực",
-    "faq": "Câu hỏi thường gặp",
+    "testimonials": "Đánh giá",
+    "faq": "Thắc mắc",
     "toggleMenuAriaLabel": "Chuyển đổi menu"
   },
   "Hero": {
@@ -39,7 +39,7 @@
     "title": "Dịch vụ của chúng tôi",
     "description": "Khám phá loạt dịch vụ đa dạng mà chúng tôi cung cấp để giúp bạn đạt được mục tiêu.",
     "slides": {
-      "uiLibrary": "Thư viện giao diện người dùng",
+      "uiLibrary": "Thư viện giao diện",
       "landingBuilder": "Trình tạo trang đích",
       "cvBuilder": "Trình tạo CV",
       "webMobileDevelopment": "Phát triển web/di động",
@@ -104,7 +104,7 @@
     }
   },
   "TestimonialsSection": {
-    "badgeLabel": "Lời chứng thực",
+    "badgeLabel": "Đánh giá",
     "title": "Người dùng nói gì về chúng tôi",
     "description": "Từ thiết kế trực quan đến các tính năng mạnh mẽ, ứng dụng của chúng tôi đã trở thành công cụ thiết yếu cho người dùng trên toàn thế giới.",
     "ctaButton": "Chia sẻ trải nghiệm của bạn",
@@ -203,7 +203,7 @@
       },
       "address": {
         "label": "Địa chỉ",
-        "value": "Faisalabad, Pakistan"
+        "value": "Tam Kỳ, Đà Nẵng, Việt Nam"
       }
     },
     "form": {

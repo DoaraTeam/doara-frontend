@@ -44,7 +44,7 @@ export default function Features() {
   return (
     <section
       id="features"
-      className="text-foreground relative overflow-hidden py-12 sm:py-24 md:py-32"
+      className="text-foreground relative overflow-hidden py-12 sm:py-24 md:py-32 max-w-7xl mx-auto"
     >
       <div className="bg-primary absolute -top-10 left-1/2 h-16 w-44 -translate-x-1/2 rounded-full opacity-40 blur-3xl select-none"></div>
       <div className="via-primary/50 absolute top-0 left-1/2 h-px w-3/5 -translate-x-1/2 bg-gradient-to-r from-transparent to-transparent transition-all ease-in-out"></div>
@@ -75,7 +75,7 @@ export default function Features() {
             <div className="grid grid-cols-12 gap-4 justify-center">
               {/* Cli */}
               <motion.div
-                className="group border-secondary/40 text-card-foreground relative col-span-12 flex flex-col overflow-hidden rounded-xl border-2 p-6 shadow-xl transition-all ease-in-out md:col-span-6 xl:col-span-6 xl:col-start-2"
+                className="group border-secondary/40 text-card-foreground relative col-span-12 flex flex-col overflow-hidden rounded-xl border-2 p-6 shadow-xl transition-all ease-in-out md:col-span-6 xl:col-span-6 xl:col-start-1"
                 onMouseEnter={() => setIsCliHovering(true)}
                 onMouseLeave={() => setIsCliHovering(false)}
                 ref={ref}
@@ -267,7 +267,7 @@ export default function Features() {
 
               {/* Global */}
               <motion.div
-                className="group border-secondary/40 text-card-foreground relative col-span-12 flex flex-col overflow-hidden rounded-xl border-2 p-6 shadow-xl transition-all ease-in-out md:col-span-6 xl:col-span-6 xl:col-start-8"
+                className="group border-secondary/40 text-card-foreground relative col-span-12 flex flex-col overflow-hidden rounded-xl border-2 p-6 shadow-xl transition-all ease-in-out md:col-span-6 xl:col-span-6 xl:col-start-7"
                 onMouseEnter={() => setIsHovering(true)}
                 onMouseLeave={() => setIsHovering(false)}
                 ref={ref}
@@ -329,7 +329,7 @@ export default function Features() {
 
               {/* Smart Components */}
               <motion.div
-                className="group border-secondary/40 text-card-foreground relative col-span-12 flex flex-col overflow-hidden rounded-xl border-2 p-6 shadow-xl transition-all ease-in-out md:col-span-6 xl:col-span-6 xl:col-start-2"
+                className="group border-secondary/40 text-card-foreground relative col-span-12 flex flex-col overflow-hidden rounded-xl border-2 p-6 shadow-xl transition-all ease-in-out md:col-span-6 xl:col-span-6 xl:col-start-1"
                 onMouseEnter={() => setIsFeature3Hovering(true)}
                 onMouseLeave={() => setIsFeature3Hovering(false)}
                 initial={{ opacity: 0, y: 50 }}
@@ -424,7 +424,7 @@ export default function Features() {
 
               {/* Dynamic Layouts */}
               <motion.div
-                className="group border-secondary/40 text-card-foreground relative col-span-12 flex flex-col overflow-hidden rounded-xl border-2 p-6 shadow-xl transition-all ease-in-out md:col-span-6 xl:col-span-6 xl:col-start-8"
+                className="group border-secondary/40 text-card-foreground relative col-span-12 flex flex-col overflow-hidden rounded-xl border-2 p-6 shadow-xl transition-all ease-in-out md:col-span-6 xl:col-span-6 xl:col-start-7"
                 onMouseEnter={() => setIsFeature4Hovering(true)}
                 onMouseLeave={() => setIsFeature4Hovering(false)}
                 initial={{ opacity: 0, y: 50 }}

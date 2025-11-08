@@ -101,14 +101,14 @@ export function PricingSection() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               whileHover={{ y: -5 }}
-              className={`relative rounded-2xl p-8 backdrop-blur-sm border transition-all duration-300 ${
+              className={`relative flex flex-col rounded-2xl p-8 backdrop-blur-sm border transition-all duration-300 ${
                 plan.popular
                   ? "bg-gradient-to-b from-primary/10 to-transparent border-primary/30 shadow-lg shadow-primary/10"
                   : "bg-muted/20 border-border/50 hover:border-border"
               }`}
             >
               {plan.popular && (
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 flex-1">
                   <div className="bg-gradient-to-r from-primary to-primary/80 text-primary-foreground text-sm font-medium px-4 py-2 rounded-full">
                     {t("mostPopular")}
                   </div>
@@ -135,12 +135,12 @@ export function PricingSection() {
                     </>
                   )}
                 </div>
-                <p className="text-muted-foreground text-sm">
+                <p className="text-muted-foreground text-sm h-[30px]">
                   {t(`plans.${plan.key}.description`)}
                 </p>
               </div>
 
-              <ul className="space-y-4 mb-8">
+              <ul className="space-y-4 mb-8 flex-1">
                 {t
                   .raw(`plans.${plan.key}.features`)
                   .map((feature: string, featureIndex: number) => (
