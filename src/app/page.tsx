@@ -9,6 +9,7 @@ import { PricingSection } from "@/components/pricing-section";
 import { HoverFooter } from "@/components/footer";
 import { Header } from "@/components/header";
 import { Preview } from "@/components/project-show";
+import { ServicesSection } from "@/components/service-section";
 
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -48,6 +49,11 @@ export default function Home() {
       {/* Features Section */}
       <div id="features">
         <Features />
+      </div>
+
+      {/* Services Section */}
+      <div id="services">
+        <ServicesSection />
       </div>
 
       {/* Project Showcase Section */}
