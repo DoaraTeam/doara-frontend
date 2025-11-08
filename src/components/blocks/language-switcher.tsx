@@ -26,7 +26,7 @@ export function LanguageSwitcher() {
   };
 
   return (
-    <div className="flex items-center">
+    <div className="flex items-center z-[999]">
       <Select value={currentLocale} onValueChange={handleLanguageChange}>
         <SelectTrigger className="border-none bg-transparent rounded-full px-2 py-1 hover:bg-muted/20 focus:ring-0">
           <div className="flex items-center gap-2">
@@ -39,7 +39,7 @@ export function LanguageSwitcher() {
             </SelectValue>
           </div>
         </SelectTrigger>
-        <SelectContent>
+        <SelectContent className="z-[9999]">
           {i18nConfig.locales.map((locale) => (
             <SelectItem key={locale} value={locale}>
               <div className="flex items-center gap-2">
