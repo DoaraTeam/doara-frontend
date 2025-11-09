@@ -64,7 +64,13 @@ export function HoverFooter() {
           {/* Brand section */}
           <div className="flex flex-col space-y-4">
             <div className="flex items-center space-x-2">
-              <Image src="/images/doara-logo.png" height="40" width="40" alt={t("brandName")} />
+              <Image
+                src="/images/doara-logo.png"
+                height="40"
+                width="40"
+                alt={t("brandName")}
+                priority
+              />
               <span className="text-[#29A9D6] text-3xl font-bold !ml-0 relative top-[5px]">
                 {t("brandName")}
               </span>

@@ -73,7 +73,7 @@ export default function SignupPage() {
         <div className="text-center mb-8">
           <Link href="/" className="inline-block mb-6">
             <div className="flex items-center justify-center space-x-2">
-              <Image src="/images/doara-logo.png" height="40" width="40" alt="logo" />
+              <Image src="/images/doara-logo.png" height="40" width="40" alt="logo" priority />
             </div>
           </Link>
           <h1 className="text-3xl font-bold text-white mb-2">Create account</h1>

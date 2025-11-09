@@ -138,7 +138,7 @@ HoverSliderImageWrap.displayName = "HoverSliderImageWrap";
 export const HoverSliderImage = React.forwardRef<
   HTMLImageElement,
   HTMLMotionProps<"img"> & HoverSliderImageProps
->(({ index, className, ...props }, ref) => {
+>(({ index, imageUrl: _imageUrl, className, ...props }, ref) => {
   const { activeSlide } = useHoverSliderContext();
   return (
     <motion.img

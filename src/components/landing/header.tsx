@@ -66,7 +66,7 @@ export function Header({ isScrolled }: HeaderProps) {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Image src="/images/doara-logo.png" height="20" width="20" alt={t("logoText")} />
+          <Image src="/images/doara-logo.png" height="20" width="20" alt={t("logoText")} priority />
           <span className="text-[#29A9D6] text-xl font-bold !ml-0 relative top-[2px]">
             {t("logoText")}
           </span>
@@ -125,7 +125,7 @@ export function Header({ isScrolled }: HeaderProps) {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Image src="/images/doara-logo.png" height="20" width="20" alt={t("logoText")} />
+          <Image src="/images/doara-logo.png" height="20" width="20" alt={t("logoText")} priority />
         </a>
 
         <div className="flex items-center gap-2">

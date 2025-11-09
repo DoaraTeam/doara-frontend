@@ -1,10 +1,26 @@
-import { IconCloud } from "@/components/blocks/interactive-icon-cloud";
+"use client";
+
+import dynamic from "next/dynamic";
+import { DynamicCloudProps } from "@/components/blocks/interactive-icon-cloud";
+
+// Load IconCloud only on client-side to avoid hydration mismatch
+const IconCloud = dynamic<DynamicCloudProps>(
+  () => import("@/components/blocks/interactive-icon-cloud").then((mod) => mod.IconCloud),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex size-full items-center justify-center">
+        <div className="h-8 w-8 animate-spin rounded-full border-4 border-primary border-t-transparent" />
+      </div>
+    ),
+  }
+);
 
 const slugs = [
   "typescript",
   "javascript",
   "dart",
-  "java",
+  "openjdk",
   "react",
   "flutter",
   "android",
@@ -14,7 +30,7 @@ const slugs = [
   "express",
   "nextdotjs",
   "prisma",
-  "amazonaws",
+  "amazonwebservices",
   "postgresql",
   "firebase",
   "nginx",

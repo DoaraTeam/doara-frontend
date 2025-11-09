@@ -8,6 +8,7 @@ import {
 } from "@/components/blocks/animated-slideshow";
 import { Sparkles } from "lucide-react";
 import { useTranslations } from "next-intl";
+import { useEffect, useState } from "react";
 
 const SLIDES = [
   {
@@ -43,6 +44,19 @@ const SLIDES = [
 
 export function ServicesSection() {
   const t = useTranslations("ServicesSection");
+  const [isFirefox, setIsFirefox] = useState(false);
+
+  useEffect(() => {
+    // Detect Firefox browser
+    const firefox =
+      typeof window !== "undefined" && navigator.userAgent.toLowerCase().indexOf("firefox") > -1;
+    setIsFirefox(firefox);
+  }, []);
+
+  // Hide section on Firefox
+  if (isFirefox) {
+    return null;
+  }
 
   return (
     <HoverSlider className="min-h-svh p-6 md:px-12 bg-background text-foreground">
