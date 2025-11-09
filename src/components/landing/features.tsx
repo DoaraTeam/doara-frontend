@@ -11,6 +11,7 @@ import { motion, useInView } from "framer-motion";
 import { Suspense, useEffect, useRef, useState } from "react";
 import { geist } from "@/lib/fonts";
 import { cn } from "@/lib/utils";
+import { IconCloudShow } from "../blocks/icon-cloud-show";
 
 export default function Features() {
   const ref = useRef(null);
@@ -446,14 +447,15 @@ export default function Features() {
                     <p className="max-w-[460px]">{t("dynamicLayoutsDescription")}</p>
                   </div>
                 </div>
-                <div className="flex grow items-center justify-center select-none relative min-h-[300px] p-4">
+                <div className="flex grow items-center justify-center select-none relative min-h-[300px] p-4 border-none">
                   <div className="relative w-full max-w-sm">
-                    <img
+                    {/* <img
                       src="images/dynamic-component.png"
                       alt={t("dynamicLayoutsImageAlt")}
                       className="w-full h-auto rounded-lg shadow-lg"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-lg"></div>
+                    /> */}
+                    <IconCloudShow />
+                    {/* <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-lg"></div> */}
                   </div>
                 </div>
               </motion.div>

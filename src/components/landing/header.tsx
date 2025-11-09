@@ -59,7 +59,7 @@ export function Header({ isScrolled }: HeaderProps) {
         }}
       >
         <a
-          className={`z-50 flex items-center justify-center gap-1 transition-all duration-300 ${
+          className={`z-50 flex items-center justify-center transition-all duration-300 ${
             isScrolled ? "ml-4" : ""
           }`}
           href="#"
@@ -67,7 +67,9 @@ export function Header({ isScrolled }: HeaderProps) {
           rel="noopener noreferrer"
         >
           <Image src="/images/doara-logo.png" height="20" width="20" alt={t("logoText")} />
-          <span className="text-[#29A9D6] text-xl font-bold">{t("logoText")}</span>
+          <span className="text-[#29A9D6] text-xl font-bold !ml-0 relative top-[2px]">
+            {t("logoText")}
+          </span>
         </a>
 
         <div className="absolute inset-0 hidden flex-1 flex-row items-center justify-center space-x-2 text-sm font-medium text-muted-foreground transition duration-200 hover:text-foreground md:flex md:space-x-2">
