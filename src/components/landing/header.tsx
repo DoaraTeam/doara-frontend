@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { ThemeToggle } from "../theme-toggle";
@@ -109,6 +110,12 @@ export function Header({ isScrolled }: HeaderProps) {
           >
             <span className="relative z-20">{t("faq")}</span>
           </a>
+          <Link
+            href="/blog"
+            className="relative px-4 py-2 text-muted-foreground hover:text-foreground transition-colors"
+          >
+            <span className="relative z-20">Blog</span>
+          </Link>
         </div>
 
         <div className="flex items-center gap-3">
@@ -180,6 +187,13 @@ export function Header({ isScrolled }: HeaderProps) {
               >
                 {t("faq")}
               </button>
+              <Link
+                href="/blog"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="text-left px-4 py-3 text-lg font-medium text-muted-foreground hover:text-foreground transition-colors rounded-lg hover:bg-background/50"
+              >
+                Blog
+              </Link>
             </nav>
           </div>
         </div>
