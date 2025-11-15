@@ -35,7 +35,7 @@ const AnimatedLoadingSkeleton = () => {
   const generateSearchPath = (config: GridConfig) => {
     const { numCards, cols, xBase, yBase, xStep, yStep } = config;
     const rows = Math.ceil(numCards / cols); // Calculate rows based on cards and columns
-    let allPositions = [];
+    const allPositions: { x: number; y: number }[] = [];
 
     // Generate grid positions for cards
     for (let row = 0; row < rows; row++) {
@@ -62,8 +62,8 @@ const AnimatedLoadingSkeleton = () => {
       scale: Array(shuffledPositions.length).fill(1.2),
       transition: {
         duration: shuffledPositions.length * 2,
-        repeat: Infinity, // Loop animation infinitely
-        ease: [0.4, 0, 0.2, 1], // Ease function for smooth animation
+        repeat: Infinity as number, // Loop animation infinitely
+        ease: [0.4, 0, 0.2, 1] as [number, number, number, number], // Ease function for smooth animation
         times: shuffledPositions.map((_, i) => i / (shuffledPositions.length - 1)),
       },
     };
@@ -111,8 +111,8 @@ const AnimatedLoadingSkeleton = () => {
       scale: [1, 1.1, 1], // Pulsating effect
       transition: {
         duration: 1,
-        repeat: Infinity,
-        ease: "easeInOut", // Smooth pulsation
+        repeat: Infinity as number,
+        ease: "easeInOut" as const, // Smooth pulsation
       },
     },
   };
